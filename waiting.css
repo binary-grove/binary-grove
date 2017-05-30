@@ -1,0 +1,202 @@
+/* /// Waiting CSS \\\ */
+
+
+/* Global Styles */
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: #1d1f20;
+  background-color: #fdfdfd;
+  font-family: montserrat-ultralight;
+}
+
+
+
+/* Generic Styles*/
+
+a {
+  color: #44e0d2;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+/* Main Wrapper */
+
+.site-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* Header */
+header {
+  overflow: auto;
+}
+
+.nav-wrap {
+  margin: 3vh 1em;
+}
+
+
+
+/* Foooter */
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  overflow: auto;
+  margin-top: 10vh;
+}
+
+footer a {
+  color: #44abe0;
+}
+
+
+
+/* Center Fold */
+
+.main {
+  /* 
+  min-height: 80vh;  */
+  min-height: calc(50vh - 65px);
+
+}
+
+.main.home {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-top: 11vh;
+}
+
+.hero {
+  width: 100vw;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  background: url("https://static-cdn.123rf.com/images/exit_intent/free_vector_ty_bg_1.jpg") no-repeat  0% -12% fixed; 
+}
+
+/* Clip text element */
+.clip-text {
+  font-size: 8em;
+  font-weight: bold;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  padding: .5em 0;
+  text-align: center;
+  /* Color fallback */
+  color: #fdfdfd;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+    position: absolute;
+    content: '';
+}
+
+/* Background */
+.clip-text:before {
+  z-index: -2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+  position: absolute;
+  z-index: -1;
+  top: .125em;
+  right: .125em;
+  bottom: .125em;
+  left: .125em;
+  background-color: #fdfdfd;
+}
+
+.text-wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.text-wrap svg {
+  font: bold 80px sans-serif;
+  width: 29%;
+  min-width: 3em;
+}
+
+.img-layer {
+  fill: url('#p-img');
+}
+
+.hero h1, .hero h4 {
+  text-align: center;
+  margin: 0;
+  color: #ffffff;
+}
+
+.hero-img {
+  margin: 0 auto;
+}
+
+.text-wrap:after {
+	content:"_";
+	opacity: 0;
+	animation: cursor 1s infinite;
+  font-size: 5em;
+  vertical-align: bottom;
+/* border-left: 40px solid #000;*/
+}
+
+/* cursor animation */
+@keyframes cursor {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
